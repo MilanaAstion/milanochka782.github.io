@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+<div class="conteiner2 conteiner5">
+	<div class="iblock" id="blck" :class="{'visible':menu==1}">
+		<div class="x" @click = "openMenu()"><i class="fa-solid fa-x"></i></div>
+		<div class="inform2">
+			<a href="index.html">Home</a>
+			<a href="#">Company Profile</a>
+			<a href="all.html">Products</a>
+			<a href="#">Services</a>
+			<a href="#">R&D</a>
+			<a href="contacts.html">Contact</a>
+		</div>
+	</div>
+	<div class="header-homepage">
+		<a href="index.html"><img class="logo" src="img/logo.png"></a>
+		<div class="search">
+			<!-- <p>Search</p>
+			<i class="fa-solid fa-magnifying-glass"></i> -->
+			<input type="text" name="input" value="Search">
+			<button class="glass" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</div>
+		<div class="inform">
+			<a href="index.html">Home</a>
+			<a href="#">Company Profile</a>
+			<a href="all.html">Products</a>
+			<a href="#">Services</a>
+			<a href="#">R&D</a>
+			<a href="contacts.html">Contact</a>
+		</div>
+	</div>
+	<div class="content2">
+		<div class="menu" >
+			<button class="menbt" @click="openMenu()"><i class="fa-solid fa-bars"></i></button>
+		</div>
+		<div class="one_content">
+			<a class="arrow" href="all.html">
+				<i class="fa-solid fa-arrow-left iarr"></i>
+				<p class="parr">Return to all tomatoes</p>
+			</a>
+			<div class="determ">
+				<h1 class="one_title">{{product.title}}</h1>
+				<h2 class="one_title2 header2 ">{{product.short_text}}<br>Red Standard Round</h2>
+
+				<img class="one_img" src="img/image 7.png">
+				<div class="redgrp">
+					<img class="red" src="img/Group 17.png">
+					<h3 class="veryhigh">Very high yield and<br>excellent fruits quality!</h3>
+				</div>
+					<h4 class="act act2 mrgact">CHARACTERISTICS</h4>
+				<hr color="#57984C" class="line l4"/>
+				<p class="paragraph p2"><b>Resistance</b><br>{{product.desc}}</p>
+				<h4 class="act act2">Plant</h4>
+				<hr color="#57984C" class="line l4"/>
+				<ul class="characteristic">
+					<li><span>Strong vigor that provides good leaf coverage.</span></li>
+					<li><span>Very high productivity with good fruit setting.</span></li>
+					<li><span>Early matured variety.</span></li>
+				</ul>
+				<h4 class="act act2">Fruit</h4>
+				<hr color="#57984C" class="line l4"/>
+				<ul class="characteristic">
+					<li><span>Long shelf life on plant and post harvest.</span></li>
+					<li><span>Nice shiny attractive deep red color.</span></li>
+					<li><span>Average fruit size: 140 – 160 grams.</span></li>
+				</ul>
+				<div class="circle_color">
+					<h4 class="act act2 act3">Cycle</h4>
+					<hr color="#57984C" class="line l4 l6"/>
+					<ul class="characteristic characteristic4">
+						<li><span>Spring</span></li>
+						<li><span>Fall</span></li>
+						<li><span>Winter</span></li>
+					</ul>
+					<h4 class="act act2 act4">Color</h4>
+					<hr color="#57984C" class="line l4 l6"/>
+					<ul class="characteristic characteristic2 characteristic5">
+						<li class="list_style"><span>Red</span></li>
+					</ul>
+				</div>
+				<div class="icon">
+					<a href="#" @click.prevent="addToCart(product.id);" v-if="btnVisible==0">
+						<p>
+							<i class="fa-solid fa-cart-shopping"></i>
+							Add to cart
+						</p>
+					</a>
+					<a href="contacts.html" v-if="btnVisible==1">
+						<p>Go to cart</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="contacts">
+			<a class="contact" href="#">PROFILE</a>	
+			<a class="contact" href="#">MANAGEMENT</a>
+			<a class="contact" href="all.html">PRODUCTS</a>
+			<a class="contact rnd" href="#">R&D</a>
+			<a class="contact" href="#">LINKS</a>
+			<a class="contact" href="#">SITEMAP</a>
+			<a class="contact" href="contacts.html">CONTACT</a>
+		</div>
+		<ul class="social">
+			<li>
+			  <a href="#"><i class="fa-brands fa-linkedin-in .icon"></i>    </a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-instagram .icon"></i></a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-youtube .icon"></i></a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-twitter .icon"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa-brands fa-facebook-f .icon"></i></a>
+			</li>
+		  </ul>
+	</div>
+	<div class="information">
+		<p class="inf2020">AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+	</div>
+</div>
+<script src="https://kit.fontawesome.com/9222919ce2.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

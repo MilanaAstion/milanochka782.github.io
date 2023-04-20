@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>	
+<body>
+<div class="conteiner3 conteiner5">
+	<div class="iblock" id="blck" :class="{'visible':menu==1}">
+		<div class="x" @click = "openMenu()"><i class="fa-solid fa-x"></i></div>
+		<div class="inform2">
+			<a href="index.html">Home</a>
+			<a href="#">Company Profile</a>
+			<a href="all.html">Products</a>
+			<a href="#">Services</a>
+			<a href="#">R&D</a>
+			<a href="contacts.html">Contact</a>
+		</div>
+	</div>
+	<div class="header-homepage">
+		<a href="index.html"><img class="logo" src="img/logo.png"></a>
+		<div class="search">
+			<!-- <p>Search</p>
+			<i class="fa-solid fa-magnifying-glass"></i> -->
+			<input type="text" name="input" value="Search">
+			<button class="glass" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</div>
+		<div class="inform">
+			<a href="index.html">Home</a>
+			<a href="#">Company Profile</a>
+			<a href="all.html">Products</a>
+			<a href="#">Services</a>
+			<a href="#">R&D</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+	<div class="banner2"><img class="cont_banner" src="img/image 8.png"></div>
+	<div class="menu" >
+		<button class="menbt" @click="openMenu()"><i class="fa-solid fa-bars"></i></button>
+	</div>
+	<div class="content3">
+		<h2 class="header2 h3">Contact us</h2>
+		<form class="contacts2" action="">
+			<label>Name*</label>
+			<input type="text" name="name" required>
+			<label>Company Name</label>
+			<input type="text" name="company_name">
+			<label>Position</label>
+			<input type="text" name="position">
+			<label>City</label>
+			<input type="text" name="city">
+			<label>Country</label>
+			<input type="text" name="country">
+			<label>Telephone</label>
+			<input type="tel" name="telephone">
+			<label>Email*</label>
+			<input type="email" name="email" required>
+			<div class="right">
+				<label>You are a</label>
+				<select class="w635" name="select">
+					<option value="value1">seed producer</option>
+				</select>
+				<label>If other,please specify</label>
+				<input class="w635" type="text" name="other">
+				<label>You are interested in</label>
+				<textarea class="intrested"></textarea>
+				<label>Please type this code</label>
+				<img class="code" src="img/image 12.png">
+				<input class="code inpcode" type="text" name="code">
+			</div>	
+			<button class="btn_send">Send Message</button>
+			</form>
+	</div>
+	<div class="adress">
+		<div class="adr">
+			<h4 class="act act2 contadr">Our Address</h4>
+			<hr color="#57984C" class="line l5"/>
+			<p class="paddress">AGRIDERA Seeds & Agriculture Ltd.<br>P.O Box 103,<br>Gedera 70750, Israel.
+				<br>Telephone: <a href="tel:+972 8 944 9222">+972 8 944 9222</a>
+			</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="contacts">
+			<a class="contact" href="#">PROFILE</a>	
+			<a class="contact" href="#">MANAGEMENT</a>
+			<a class="contact" href="all.html">PRODUCTS</a>
+			<a class="contact rnd" href="#">R&D</a>
+			<a class="contact" href="#">LINKS</a>
+			<a class="contact" href="#">SITEMAP</a>
+			<a class="contact" href="#">CONTACT</a>
+		</div>
+		<ul class="social">
+			<li>
+			  <a href="#"><i class="fa-brands fa-linkedin-in .icon"></i>    </a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-instagram .icon"></i></a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-youtube .icon"></i></a>
+			</li>
+			<li>
+			  <a href="#"><i class="fa-brands fa-twitter .icon"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa-brands fa-facebook-f .icon"></i></a>
+			</li>
+		  </ul>
+	</div>
+	<div class="information">
+		<p class="inf2020">AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+	</div>
+</div>
+<script src="https://kit.fontawesome.com/9222919ce2.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
